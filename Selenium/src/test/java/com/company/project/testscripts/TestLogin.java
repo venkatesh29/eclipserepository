@@ -1,0 +1,30 @@
+package com.company.project.testscripts;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.company.project.pagelibrary.SignIn;
+
+import com.company.project.testbase.TestBse;
+
+public class TestLogin extends TestBse{
+	
+	@BeforeTest
+	public void initiate() throws IOException {
+		init();
+		
+	}
+    @Test
+     public void dologins() {
+	  SignIn si=new SignIn(driver);
+	  si.dologin();
+    }
+    @AfterTest    
+    public void closebrowser(){    	
+    	closebrowser();
+    }
+    
+}

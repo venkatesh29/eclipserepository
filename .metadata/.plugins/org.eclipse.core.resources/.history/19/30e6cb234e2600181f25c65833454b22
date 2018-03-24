@@ -1,0 +1,26 @@
+package TestScript;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import PagePackage.Page1;
+import PagePackage.Page2;
+import PagePackage.Page3;
+
+public class NewTest {  
+	  WebDriver driver;
+	
+  @Test
+  public void f() {
+	 Page1 p1=new Page1(driver);
+	 p1.facebookinit();
+	 
+	 Page2 p2=new Page2(driver);
+	 p2.redbusinit();
+	 
+	 Page3 p3=new Page3(driver);
+	 p3.hdfcbankinit();
+	  
+	  
+  }
+}

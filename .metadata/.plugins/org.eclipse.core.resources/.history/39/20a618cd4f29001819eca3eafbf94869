@@ -1,0 +1,15 @@
+package Itestliner;
+
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+
+public class TestCases {
+	@Test		
+	public void TestToFail()				
+	{		
+	    System.out.println("This method to test fail");					
+	    Assert.assertTrue(false);			
+	}
+}

@@ -1,0 +1,24 @@
+package com.company.project.testscripts;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.company.project.pagelibrary.SignIn;
+
+import com.company.project.testbase.TestBse;
+
+public class TestLogin extends TestBse{
+	
+	@BeforeTest
+	public void initiate() throws IOException {
+		init();
+		
+	}
+@Test
+public void dologin() {
+	SignIn si=new SignIn(driver);
+	si.type("villa.venkatesh@gmail.com");	
+}
+}

@@ -1,0 +1,22 @@
+package com.company.project.pagelibrary;
+
+
+import java.util.logging.Logger;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+public class SignIn {
+	WebDriver driver;
+	static Logger log=Logger.getLogger(SignIn.class.getName());
+	WebElement signIn=driver.findElement(By.xpath(".//*[@id='header']/div[2]/div/div/nav/div[1]/a"));
+	WebElement createAccEmailAddr=driver.findElement(By.xpath(".//*[@id='email_create']"));
+	
+	public void clickonSignIn() {
+		log.info("clicking on signIn link");
+		signIn.click();
+	}
+
+}

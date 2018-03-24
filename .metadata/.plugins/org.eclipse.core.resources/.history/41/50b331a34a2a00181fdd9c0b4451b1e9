@@ -1,0 +1,32 @@
+package xlreader;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+public class testxlreader {
+	public String filepath=System.getProperty("user.dir")+"//src//Config//ExcelXLS.xls";
+	public int RowCount;
+	public xlreader xlr;
+	
+	@Test(priority=1)
+	public void testingxlreader() throws IOException {
+		 xlr=new xlreader(filepath);
+		RowCount=xlr.getRowCount("SchoolLoginData");
+		
+	}
+	@Test(priority=2)
+	public void runmode() {
+		getrunmode();
+		
+	}
+	
+	public void getrunmode() {
+		for(int i=1;i<=RowCount;i++) {
+			 String runmode=xlr.getCellData("SchoolLoginData", 3, i);
+			 System.out.println(runmode);
+		}		
+	}
+	
+
+}

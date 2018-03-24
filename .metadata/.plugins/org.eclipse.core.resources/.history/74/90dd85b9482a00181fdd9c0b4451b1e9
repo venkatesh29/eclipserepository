@@ -1,0 +1,18 @@
+package xlreader;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+public class testxlreader {
+	public String filepath=System.getProperty("user.dir")+"//PageObjectModel//src//Config//ExcelXLS.xls";
+	@Test
+	public void testingxlreader() throws IOException {
+		xlreader xlr=new xlreader(filepath);
+		int RowCount=xlr.getRowCount("SchoolLoginData");
+		System.out.println(RowCount);
+		
+		
+	}
+
+}

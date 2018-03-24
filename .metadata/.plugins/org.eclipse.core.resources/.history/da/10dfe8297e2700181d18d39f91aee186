@@ -1,0 +1,13 @@
+package Log4j;
+
+import java.util.logging.Logger;
+
+import org.apache.log4j.PropertyConfigurator;
+
+public class TestBase {
+	public static final Logger log=Logger.getLogger(TestBase.class.getName());
+public void loadlog4j() {
+	String log4jfilepath=System.getProperty("user.dir")+"\\src\\log4j.properties";
+	PropertyConfigurator.configure(log4jfilepath);	
+}
+}
